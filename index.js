@@ -667,6 +667,6 @@ app.post('/add-contragent', (req, res) => {
 
 const server = http.createServer(app);
 
-server.listen(3000, () => {
-    console.log('Сервер запущен на порту 3000');
+server.listen(80, () => {
+    console.log('Сервер запущен на порту 80');
 });
