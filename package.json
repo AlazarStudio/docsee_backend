@@ -1,0 +1,28 @@
+{
+  "name": "docs.alazar.ru",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "alazar",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "docx-pdf": "^0.0.1",
+    "docxtemplater": "^3.49.1",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "mammoth": "^1.8.0",
+    "office-to-pdf": "^4.0.0",
+    "pdf-lib": "^1.17.1",
+    "pizzip": "^3.1.7",
+    "puppeteer": "^22.15.0",
+    "xmldom": "^0.6.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
