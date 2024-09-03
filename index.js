@@ -662,6 +662,36 @@ app.post('/add-contragent', (req, res) => {
     res.status(200).send('Контрагент добавлен');
 });
 
+// Endpoint to delete a document by filename
+app.delete('/delete-document', (req, res) => {
+    const { filename } = req.body;
+
+    if (!filename) {
+        return res.status(400).json({ error: 'Filename is required.' });
+    }
+
+    const jsonFilePath = 'db/documents.json';
+    let documents = [];
+    
+    if (fs.existsSync(jsonFilePath)) {
+        const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
+        if (jsonData.trim().length > 0) {
+            documents = JSON.parse(jsonData);
+        }
+    } else {
+        return res.status(500).json({ error: 'Documents file does not exist.' });
+    }
+
+    const initialLength = documents.length;
+    documents = documents.filter(doc => doc.filename !== filename);
+
+    if (documents.length === initialLength) {
+        return res.status(404).json({ error: 'Document not found.' });
+    }
+
+    fs.writeFileSync(jsonFilePath, JSON.stringify(documents, null, 2), 'utf-8');
+    res.status(200).json({ message: 'Document deleted successfully.' });
+});
 
 
 
