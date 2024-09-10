@@ -1,4 +1,5 @@
 const http = require('http');
+const https = require('https');
 const express = require('express');
 const cors = require('cors');
 const fs = require('fs');
@@ -672,7 +673,7 @@ app.delete('/delete-document', (req, res) => {
 
     const jsonFilePath = 'db/documents.json';
     let documents = [];
-    
+
     if (fs.existsSync(jsonFilePath)) {
         const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
         if (jsonData.trim().length > 0) {
@@ -694,9 +695,17 @@ app.delete('/delete-document', (req, res) => {
 });
 
 
+const sslOptions = {
+    key: fs.readFileSync('backend.demoalazar.ru/privkey.pem'),
+    cert: fs.readFileSync('backend.demoalazar.ru/fullchain.pem')
+};
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-server.listen(80, () => {
-    console.log('Сервер запущен на порту 80');
+// server.listen(80, () => {
+//     console.log('Сервер запущен на порту 80');
+// });
+
+https.createServer(sslOptions, app).listen(443, () => {
+    console.log(`HTTPS server running on port 443`);
 });

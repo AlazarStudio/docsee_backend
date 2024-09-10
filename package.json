@@ -15,6 +15,7 @@
     "docxtemplater": "^3.49.1",
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
+    "https": "^1.0.0",
     "mammoth": "^1.8.0",
     "office-to-pdf": "^4.0.0",
     "pdf-lib": "^1.17.1",
