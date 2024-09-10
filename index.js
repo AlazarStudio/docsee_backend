@@ -696,10 +696,10 @@ app.delete('/delete-document', (req, res) => {
 });
 
 app.put('/update-document-state', (req, res) => {
-    const { filename, state } = req.body;
+    const { dataInfo } = req.body;
 
     // Проверка на наличие данных
-    if (!filename || state === undefined) {
+    if (!dataInfo.filename || dataInfo.state === undefined) {
         return res.status(400).json({ error: 'Filename and state are required.' });
     }
 
@@ -717,14 +717,14 @@ app.put('/update-document-state', (req, res) => {
     }
 
     // Поиск документа по имени файла
-    const documentIndex = documents.findIndex(doc => doc.filename === filename);
+    const documentIndex = documents.findIndex(doc => doc.filename === dataInfo.filename);
 
     if (documentIndex === -1) {
         return res.status(404).json({ error: 'Document not found.' });
     }
 
     // Обновление состояния документа
-    documents[documentIndex].state = state;
+    documents[documentIndex].state = dataInfo.state;
 
     // Сохранение обновленного списка документов
     fs.writeFileSync(jsonFilePath, JSON.stringify(documents, null, 2), 'utf-8');
