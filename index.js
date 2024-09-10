@@ -216,7 +216,8 @@ app.post('/generate-contract', (req, res) => {
         documents.push({
             filename: filename,
             filePath: filePath,
-            data: formData
+            data: formData,
+            state: 'Создан'
         });
 
         // Запись в JSON файл
@@ -694,6 +695,42 @@ app.delete('/delete-document', (req, res) => {
     res.status(200).json({ message: 'Document deleted successfully.' });
 });
 
+app.put('/update-document-state', (req, res) => {
+    const { filename, state } = req.body;
+
+    // Проверка на наличие данных
+    if (!filename || state === undefined) {
+        return res.status(400).json({ error: 'Filename and state are required.' });
+    }
+
+    const jsonFilePath = 'db/documents.json';
+    let documents = [];
+
+    // Проверка существования файла с документами
+    if (fs.existsSync(jsonFilePath)) {
+        const jsonData = fs.readFileSync(jsonFilePath, 'utf-8');
+        if (jsonData.trim().length > 0) {
+            documents = JSON.parse(jsonData);
+        }
+    } else {
+        return res.status(500).json({ error: 'Documents file does not exist.' });
+    }
+
+    // Поиск документа по имени файла
+    const documentIndex = documents.findIndex(doc => doc.filename === filename);
+
+    if (documentIndex === -1) {
+        return res.status(404).json({ error: 'Document not found.' });
+    }
+
+    // Обновление состояния документа
+    documents[documentIndex].state = state;
+
+    // Сохранение обновленного списка документов
+    fs.writeFileSync(jsonFilePath, JSON.stringify(documents, null, 2), 'utf-8');
+
+    res.status(200).json({ message: 'Document state updated successfully.' });
+});
 
 const sslOptions = {
     key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
