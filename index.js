@@ -698,7 +698,7 @@ app.delete('/delete-document', (req, res) => {
 app.put('/update-document-state', (req, res) => {
     const { dataInfo } = req.body;
 
-    console.log(dataInfo)
+    console.log(req.body)
 
     // Проверка на наличие данных
     if (!dataInfo.filename || dataInfo.state === undefined) {
