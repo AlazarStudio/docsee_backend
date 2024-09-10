@@ -356,7 +356,7 @@ app.post('/generate-expenses', (req, res) => {
         doc.render();
         const output = doc.getZip().generate({ type: 'nodebuffer' });
 
-        const filename = `Счет №${nomerScheta} для ${formData.contractName}`;
+        const filename = `Счет №${nomerScheta} от ${formData.creationDate} для ${formData.contractName}`;
         const filePath = `docs/${filename}`;
 
         fs.writeFileSync(filePath, output);
@@ -510,7 +510,7 @@ app.post('/generate-acts', (req, res) => {
         doc.render();
         const output = doc.getZip().generate({ type: 'nodebuffer' });
 
-        const filename = `Акт №${nomerActa} для ${formData.contractName}`;
+        const filename = `Акт №${nomerActa} от ${formData.creationDate} для ${formData.contractName}`;
         const filePath = `docs/${filename}`;
 
         fs.writeFileSync(filePath, output);
@@ -601,7 +601,7 @@ app.post('/generate-report', (req, res) => {
         doc.render();
         const output = doc.getZip().generate({ type: 'nodebuffer' });
 
-        const filename = `Отчет №${document.reports.length + 1} для ${formData.contractName}`;
+        const filename = `Отчет №${document.reports.length + 1} от ${formData.creationDate} для ${formData.contractName}`;
         const filePath = `docs/${filename}`;
 
         fs.writeFileSync(filePath, output);
