@@ -696,8 +696,8 @@ app.delete('/delete-document', (req, res) => {
 
 
 const sslOptions = {
-    key: fs.readFileSync('../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
-    cert: fs.readFileSync('../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
+    key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
+    cert: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
 };
 
 // const server = http.createServer(app);
