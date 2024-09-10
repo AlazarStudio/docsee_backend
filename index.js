@@ -698,10 +698,8 @@ app.delete('/delete-document', (req, res) => {
 app.put('/update-document-state', (req, res) => {
     const { data } = req.body;
 
-    console.log(data)
-
     // Проверка на наличие данных
-    if (!dataInfo.filename || dataInfo.state === undefined) {
+    if (!data.filename || data.state === undefined) {
         return res.status(400).json({ error: 'Filename and state are required.' });
     }
 
@@ -719,14 +717,14 @@ app.put('/update-document-state', (req, res) => {
     }
 
     // Поиск документа по имени файла
-    const documentIndex = documents.findIndex(doc => doc.filename === dataInfo.filename);
+    const documentIndex = documents.findIndex(doc => doc.filename === data.filename);
 
     if (documentIndex === -1) {
         return res.status(404).json({ error: 'Document not found.' });
     }
 
     // Обновление состояния документа
-    documents[documentIndex].state = dataInfo.state;
+    documents[documentIndex].state = data.state;
 
     // Сохранение обновленного списка документов
     fs.writeFileSync(jsonFilePath, JSON.stringify(documents, null, 2), 'utf-8');
