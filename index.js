@@ -29,8 +29,8 @@ app.post('/generate-contract', (req, res) => {
         writtenAmountAct: formData.writtenAmountAct,
         writtenAmountDogovor: formData.writtenAmountDogovor,
         contractEndDate: formData.contractEndDate,
-        // dogovorYear: new Date().getFullYear(),
-        dogovorYear: '2024',
+        dogovorYear: new Date().getFullYear(),
+        // dogovorYear: '2024',
 
         //Для наших ИП
         own_ip_fullName: formData.ip.fullName,
@@ -288,8 +288,8 @@ app.post('/generate-expenses', (req, res) => {
             document.data.services.length > 1 && document.data.services.length <= 4 ? 'наименования' :
                 document.data.services.length >= 5 ? 'наименований' : ''}`,
 
-        // dogovorYear: new Date().getFullYear(),
-        dogovorYear: '2024',
+        dogovorYear: new Date().getFullYear(),
+        // dogovorYear: '2024',
         expense_creationDate: formData.creationDate,
         expense_number: nomerScheta,
         own_ip_fullName: document.data.ip.fullName,
@@ -434,8 +434,8 @@ app.post('/generate-acts', (req, res) => {
 
         writtenDate: document.data.writtenDate,
 
-        // dogovorYear: new Date().getFullYear(),
-        dogovorYear: '2024',
+        dogovorYear: new Date().getFullYear(),
+        // dogovorYear: '2024',
         act_creationDate: formData.creationDate,
         act_number: nomerActa,
         own_ip_fullName: document.data.ip.fullName,
@@ -562,8 +562,8 @@ app.post('/generate-report', (req, res) => {
 
     let dogovorTags = {
         items: document.data.services,
-        // dogovorYear: new Date().getFullYear(),
-        dogovorYear: '2024',
+        dogovorYear: new Date().getFullYear(),
+        // dogovorYear: '2024',
         report_creationDate: formData.creationDate,
         numberDate: document.data.numberDate,
 
