@@ -736,17 +736,17 @@ app.put('/update-document-state', (req, res) => {
     res.status(200).json({ message: 'Document state updated successfully.' });
 });
 
-// const sslOptions = {
-//     key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
-//     cert: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
-// };
+const sslOptions = {
+    key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
+    cert: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
+};
 
-const server = http.createServer(app);
+// const server = http.createServer(app);
 
-server.listen(5555, () => {
-    console.log('Сервер запущен на порту 5555');
-});
-
-// https.createServer(sslOptions, app).listen(443, () => {
-//     console.log(`HTTPS server running on port 443`);
+// server.listen(5555, () => {
+//     console.log('Сервер запущен на порту 5555');
 // });
+
+https.createServer(sslOptions, app).listen(443, () => {
+    console.log(`HTTPS server running on port 443`);
+});
