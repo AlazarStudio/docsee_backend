@@ -1,1 +1,243 @@
-[]
+[
+  {
+    "filename": "Договор №06-7 qwe.docx",
+    "filePath": "docs/Договор №06-7 qwe.docx",
+    "data": {
+      "contractType": "2",
+      "template": "Template_2_side_document_design",
+      "ip": {
+        "lastDocNumber": "6",
+        "fullName": "Индивидуальный предприниматель Джатдоев Алим Сеит-Алиевич",
+        "shortName": "ИП  Джатдоев А. С-А.",
+        "basis": "ОГРНИП",
+        "print": "Да",
+        "post": "Индивидуальный предприниматель",
+        "fio": "Джатдоев Алим Сеит-Алиевич",
+        "initials": "А.С-А. Джатдоев",
+        "address": "369300, РОССИЯ, Респ КАРАЧАЕВОЧЕРКЕССКАЯ, р-н УСТЬ-ДЖЕГУТИНСКИЙ, г УСТЬ-ДЖЕГУТА, ул КОЧУБЕЯ, ДОМ 7",
+        "ogrnip": "321265100058328",
+        "inn": "091693197735",
+        "rs": "40802810120000213553",
+        "bank": "ООО \"Банк Точка\"",
+        "bik": "044525104",
+        "ks": "30101810745374525104",
+        "email": "alimdzhatdoev@mail.ru",
+        "phone": "+7 928 029-02-69",
+        "orgName": "ИП  Джатдоев А. С-А. ООО \"Банк Точка\""
+      },
+      "contragent": {
+        "orgName": "qwe qwe",
+        "fullName": "qwe",
+        "shortName": "qwe",
+        "orgNameGen": "qwe",
+        "basis": "Устава",
+        "print": "да",
+        "post": "qwe",
+        "directorName": "qwe",
+        "directorFullNameGen": "qwe",
+        "initials": "qwe",
+        "address": "qwe",
+        "INN": "qwe",
+        "KPP": "qwe",
+        "OKTMO": "qwe",
+        "OKATO": "qwe",
+        "OKPO": "qwe",
+        "OKOPF": "qwe",
+        "OGRN": "qwe",
+        "LSCH": "qwe",
+        "RSCH": "qwe",
+        "KSCH": "qwe",
+        "NKAZCH": "qwe",
+        "EKAZSCH": "qwe",
+        "bankName": "qwe",
+        "BIK": "qwe",
+        "OKOGU": "qwe",
+        "email": "viyin74950@exitbit.com",
+        "phone": "qwe",
+        "type": "Гос"
+      },
+      "receiver": null,
+      "contractNumber": "06-7",
+      "contractJustNumber": "123 123",
+      "numberDate": "30.05.2025",
+      "writtenDate": "30 мая 2025",
+      "contractSubjectNom": "qweqweqwe",
+      "contractSubjectGen": "qweqew",
+      "writtenAmountAct": "сто двадцать три тысячи сто двадцать три рубля 00 копеек",
+      "writtenAmountDogovor": "(сто двадцать три тысячи сто двадцать три) рубля 00 копеек",
+      "stoimostNumber": "123 123",
+      "contractEndDate": "30 июня 2025"
+    },
+    "state": "Создан",
+    "acts": [
+      {
+        "actsNumber": "06-7-A1",
+        "contractType": "2",
+        "creationDate": "28.06.2025",
+        "filename": "Акт №06-7-A1 от 28.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A2",
+        "contractType": "2",
+        "creationDate": "27.06.2025",
+        "filename": "Акт №06-7-A2 от 27.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A3",
+        "contractType": "2",
+        "creationDate": "30.06.2025",
+        "filename": "Акт №06-7-A3 от 30.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A4",
+        "contractType": "2",
+        "creationDate": "30.06.2025",
+        "filename": "Акт №06-7-A4 от 30.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A5",
+        "contractType": "2",
+        "creationDate": "30.06.2025",
+        "filename": "Акт №06-7-A5 от 30.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A6",
+        "contractType": "2",
+        "creationDate": "22.06.2025",
+        "filename": "Акт №06-7-A6 от 22.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A7",
+        "contractType": "2",
+        "creationDate": "06.06.2025",
+        "filename": "Акт №06-7-A7 от 06.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A8",
+        "contractType": "2",
+        "creationDate": "18.06.2025",
+        "filename": "Акт №06-7-A8 от 18.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A9",
+        "contractType": "2",
+        "creationDate": "06.06.2025",
+        "filename": "Акт №06-7-A9 от 06.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A10",
+        "contractType": "2",
+        "creationDate": "29.06.2025",
+        "filename": "Акт №06-7-A10 от 29.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A11",
+        "contractType": "2",
+        "creationDate": "20.06.2025",
+        "filename": "Акт №06-7-A11 от 20.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A12",
+        "contractType": "2",
+        "creationDate": "20.06.2025",
+        "filename": "Акт №06-7-A12 от 20.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A13",
+        "contractType": "2",
+        "creationDate": "12.06.2025",
+        "filename": "Акт №06-7-A13 от 12.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A14",
+        "contractType": "2",
+        "creationDate": "30.06.2025",
+        "filename": "Акт №06-7-A14 от 30.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A15",
+        "contractType": "2",
+        "creationDate": "01.07.2025",
+        "filename": "Акт №06-7-A15 от 01.07.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A16",
+        "contractType": "2",
+        "creationDate": "18.06.2025",
+        "filename": "Акт №06-7-A16 от 18.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A17",
+        "contractType": "2",
+        "creationDate": "06.06.2025",
+        "filename": "Акт №06-7-A17 от 06.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A18",
+        "contractType": "2",
+        "creationDate": "24.06.2025",
+        "filename": "Акт №06-7-A18 от 24.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A19",
+        "contractType": "2",
+        "creationDate": "19.06.2025",
+        "filename": "Акт №06-7-A19 от 19.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A20",
+        "contractType": "2",
+        "creationDate": "05.06.2025",
+        "filename": "Акт №06-7-A20 от 05.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A21",
+        "contractType": "2",
+        "creationDate": "12.06.2025",
+        "filename": "Акт №06-7-A21 от 12.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A22",
+        "contractType": "2",
+        "creationDate": "25.06.2025",
+        "filename": "Акт №06-7-A22 от 25.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A23",
+        "contractType": "2",
+        "creationDate": "14.06.2025",
+        "filename": "Акт №06-7-A23 от 14.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A24",
+        "contractType": "2",
+        "creationDate": "12.06.2025",
+        "filename": "Акт №06-7-A24 от 12.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A25",
+        "contractType": "2",
+        "creationDate": "13.06.2025",
+        "filename": "Акт №06-7-A25 от 13.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "actsNumber": "06-7-A26",
+        "contractType": "2",
+        "creationDate": "13.06.2025",
+        "filename": "Акт №06-7-A26 от 13.06.2025 для Договор №06-7 qwe.docx"
+      }
+    ],
+    "expenses": [
+      {
+        "expensesNumber": "06-7-С1",
+        "creationDate": "30.06.2025",
+        "filename": "Счет №06-7-С1 от 30.06.2025 для Договор №06-7 qwe.docx"
+      },
+      {
+        "expensesNumber": "06-7-С2",
+        "creationDate": "19.06.2025",
+        "filename": "Счет №06-7-С2 от 19.06.2025 для Договор №06-7 qwe.docx"
+      }
+    ]
+  }
+]

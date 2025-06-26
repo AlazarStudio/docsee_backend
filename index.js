@@ -283,10 +283,10 @@ app.post('/generate-expenses', (req, res) => {
             '';
 
     let dogovorTags = {
-        items: document.data.services,
-        act_countItems: `${document.data.services.length} ${document.data.services.length == 1 ? 'наименование' :
-            document.data.services.length > 1 && document.data.services.length <= 4 ? 'наименования' :
-                document.data.services.length >= 5 ? 'наименований' : ''}`,
+        items: formData.data.services,
+        act_countItems: `${formData.data.services.length} ${formData.data.services.length == 1 ? 'наименование' :
+            formData.data.services.length > 1 && formData.data.services.length <= 4 ? 'наименования' :
+                formData.data.services.length >= 5 ? 'наименований' : ''}`,
 
         dogovorYear: new Date().getFullYear(),
         // dogovorYear: '2024',
@@ -306,8 +306,8 @@ app.post('/generate-expenses', (req, res) => {
         contractNumber: document.data.contractNumber,
         numberDate: document.data.numberDate,
         contractSubjectGen: document.data.contractSubjectGen,
-        stoimostNumber: document.data.stoimostNumber,
-        writtenAmountAct: document.data.writtenAmountAct,
+        stoimostNumber: formData.data.act_stoimostNumber,
+        writtenAmountAct: formData.data.act_writtenAmountAct,
         writtenDate: document.data.writtenDate,
         contragent_post: document.data.contragent.post,
         contragent_directorName: document.data.contragent.type == 'Самозанятый' ? document.data.contragent.fullName : document.data.contragent.directorName,
@@ -415,10 +415,10 @@ app.post('/generate-acts', (req, res) => {
             '';
 
     let dogovorTags = {
-        items: document.data.services,
-        act_countItems: `${document.data.services.length} ${document.data.services.length == 1 ? 'наименование' :
-            document.data.services.length > 1 && document.data.services.length <= 4 ? 'наименования' :
-                document.data.services.length >= 5 ? 'наименований' : ''}`,
+        items: formData.data.services,
+        act_countItems: `${formData.data.services.length} ${formData.data.services.length == 1 ? 'наименование' :
+            formData.data.services.length > 1 && formData.data.services.length <= 4 ? 'наименования' :
+                formData.data.services.length >= 5 ? 'наименований' : ''}`,
 
         own_ip_post: document.data.ip.post,
         own_ip_initials: document.data.ip.initials,
@@ -443,8 +443,8 @@ app.post('/generate-acts', (req, res) => {
         contractNumber: document.data.contractNumber,
         numberDate: document.data.numberDate,
         contractSubjectGen: document.data.contractSubjectGen,
-        stoimostNumber: document.data.stoimostNumber,
-        writtenAmountAct: document.data.writtenAmountAct,
+        stoimostNumber: formData.data.act_stoimostNumber,
+        writtenAmountAct: formData.data.act_writtenAmountAct,
         contragent_directorName: document.data.contragent.type == 'Самозанятый' ? document.data.contragent.fullName : document.data.contragent.directorName,
         receiver_post: document.data.receiver && document.data.receiver.post,
         receiver_directorName: document.data.receiver && (document.data.receiver.type == 'Самозанятый' ? document.data.receiver.fullName : document.data.receiver.directorName),
@@ -736,17 +736,17 @@ app.put('/update-document-state', (req, res) => {
     res.status(200).json({ message: 'Document state updated successfully.' });
 });
 
-const sslOptions = {
-    key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
-    cert: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
-};
+// const sslOptions = {
+//     key: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/privkey.pem'),
+//     cert: fs.readFileSync('../../../etc/letsencrypt/live/backend.demoalazar.ru/fullchain.pem')
+// };
 
-// const server = http.createServer(app);
+const server = http.createServer(app);
 
-// server.listen(80, () => {
-//     console.log('Сервер запущен на порту 80');
-// });
-
-https.createServer(sslOptions, app).listen(443, () => {
-    console.log(`HTTPS server running on port 443`);
+server.listen(5555, () => {
+    console.log('Сервер запущен на порту 5555');
 });
+
+// https.createServer(sslOptions, app).listen(443, () => {
+//     console.log(`HTTPS server running on port 443`);
+// });
