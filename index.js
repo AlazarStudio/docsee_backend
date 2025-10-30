@@ -338,7 +338,7 @@ app.post('/generate-expenses', (req, res) => {
     let nameForExpense =
         document.data.ip.fio == 'Уртенов Азамат Заурович' ? 'Azamat' :
             document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич' ? 'Alim' :
-                document.data.ip.fio == 'Чагарова Аминат Биляловна' ? 'Amina' :
+                document.data.ip.fio == 'Чагарова Аминат Биляловна' ? 'Alim' :
                     '';
     const templateName = `templates/expenses/Template_schet_${nameForExpense}.docx`;
     const templateContent = fs.readFileSync(templateName, 'binary');
