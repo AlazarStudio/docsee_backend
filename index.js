@@ -272,7 +272,7 @@ app.post('/generate-expenses', (req, res) => {
         document.expenses = [];
     } ``
 
-    let nomerScheta = document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич'
+    let nomerScheta = (document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич' || document.data.ip.fio == 'Чагарова Аминат Биляловна')
         ?
         `${document.data.contractNumber}-С${document.expenses.length + 1}`
         :
@@ -338,7 +338,8 @@ app.post('/generate-expenses', (req, res) => {
     let nameForExpense =
         document.data.ip.fio == 'Уртенов Азамат Заурович' ? 'Azamat' :
             document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич' ? 'Alim' :
-                '';
+                document.data.ip.fio == 'Чагарова Аминат Биляловна' ? 'Amina' :
+                    '';
     const templateName = `templates/expenses/Template_schet_${nameForExpense}.docx`;
     const templateContent = fs.readFileSync(templateName, 'binary');
 
@@ -404,7 +405,7 @@ app.post('/generate-acts', (req, res) => {
         document.acts = [];
     } ``
 
-    let nomerActa = document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич'
+    let nomerActa = (document.data.ip.fio == 'Джатдоев Алим Сеит-Алиевич' || document.data.ip.fio == 'Чагарова Аминат Биляловна')
         ?
         `${document.data.contractNumber}-A${document.acts.length + 1}`
         :
